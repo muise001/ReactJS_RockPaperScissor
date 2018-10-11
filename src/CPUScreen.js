@@ -5,7 +5,7 @@ class CPUScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      computerchoice : 'none',
+      computerchoice : 'to play',
     }
     this.calculate = this.calculate.bind(this)
   }
@@ -24,6 +24,7 @@ class CPUScreen extends Component {
         calc = 1
         this.setState({computerchoice : 'Paper'})
       }
+      this.props.calcWinner(PlayerChoice, calc)
     } else {
       calc = Math.floor(Math.random() * Math.floor(3))
       if (calc === 0) {

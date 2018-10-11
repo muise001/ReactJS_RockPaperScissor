@@ -5,7 +5,7 @@ class PlayerSide extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      chosen : 'PlayerSide',
+      chosen : 'Click',
     }
     this.changeTitle = this.changeTitle.bind(this)
   }

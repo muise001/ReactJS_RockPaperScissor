@@ -15,7 +15,7 @@ const CheatSheet = (props) => {
           <input type="number" name="tie" value={props.values.tie} onChange={props.handleChange} id="tied"/>
 
           <label htmlFor="godMode">God-Mode</label>
-          <input name="godMode" id="godMode" type="checkbox" onChange={props.handleChange}/>
+          <input name="godMode" checked={props.godMode} id="godMode" type="checkbox" onChange={props.handleChange}/>
 
           <input onClick={props.closeSheet} type="submit" value="cheat"/>
         </form>

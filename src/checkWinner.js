@@ -10,6 +10,7 @@ class CheckWinner extends Component {
   }
 
   calcWinner(PlayerChoice, Computerchoice){
+    console.log(PlayerChoice, Computerchoice);
     if (PlayerChoice === '0' && Computerchoice === 1) {
       this.props.handleChange({ target: { name: 'lost', value: this.props.values.lost + 1 } })
     } else if (PlayerChoice === '0' && Computerchoice === 2) {

@@ -43,12 +43,14 @@ class App extends Component {
         }
       })
     } else {
-      this.setState({godMode : true})
+      this.setState((state) => ({
+        godMode : !state.godMode
+      }))
     }
-
   }
 
   render(){
+     console.log(this.state.godMode)
     return (
       <div>
         <CheckWinner
@@ -59,6 +61,7 @@ class App extends Component {
           turnOnCheat={this.toggleCheat}
           applyCheat={this.state.cheated}/>
         <CheatSheet
+          godMode={this.state.godMode}
           values={this.state.values}
           cheat={this.state.cheat}
           closeSheet={this.cheated}
